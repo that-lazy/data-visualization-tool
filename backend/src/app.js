@@ -26,9 +26,9 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
 
-app.use('/auth', authRoutes);
-app.use('/transactions', transactionRoutes);
-app.use('/analytics', analyticsRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/transactions', transactionRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 app.use(notFoundHandler);
 app.use(errorHandler);
